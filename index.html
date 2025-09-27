@@ -1,164 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Annj Crochet | Handmade by Annjanea</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Feminine Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    /* Center everything */
-    body, html {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Annj Crochet | Handmade by Annjanea</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffeaf4;
+    --card: #fff0f8;
+    --muted: #b38199;
+    --accent1: #ffb7d5;
+    --accent2: #ffd6e8;
+    --text: #66334d;
+  }
 
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0;
-    }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Header font */
-    .branding h1, .branding p { 
-      font-family: 'Great Vibes', cursive; 
-      margin: 0;
-    }
+  body {
+    font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--accent2) 100%);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
 
-    /* Carousel */
-    .carousel {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 90%;
-      max-width: 1000px;
-    }
+  header {
+    width: 100%;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    border-bottom: 3px solid #ffc1de;
+    padding: 10px 0;
+  }
 
-    .slides {
-      overflow: hidden;
-      width: 100%;
-    }
+  .branding h1, .branding p {
+    font-family: 'Great Vibes', cursive;
+    margin: 5px 0;
+  }
 
-    .track {
-      display: flex;
-      transition: transform 400ms ease;
-    }
+  main.container {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
 
-    .slide {
-      flex: 0 0 33.333%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-    }
+  .carousel {
+    position: relative;
+    width: 100%;
+    background: var(--card);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 20px 0;
+  }
 
-    /* Carousel images */
-    .slide img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: filter 0.3s ease, transform 0.2s ease;
-      margin: 0 auto;
-    }
+  .slides { overflow: hidden; display: flex; justify-content: center; }
 
-    .slide img:hover {
-      filter: brightness(80%) sepia(20%) hue-rotate(300deg) saturate(150%);
-      transform: scale(1.05);
-    }
+  .track {
+    display: flex;
+    transition: transform 400ms ease;
+  }
 
-    @media (max-width: 768px) {
-      .slide img { max-height: 150px; }
-    }
-    @media (max-width: 480px) {
-      .slide img { max-height: 120px; }
-    }
+  .slide {
+    flex: 0 0 30%; /* roughly 3 per row */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
 
-    /* Carousel buttons */
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
+  .slide img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.2s ease;
+  }
 
-    .btn {
-      background: #ffb7d5;
-      border: none;
-      color: #66334d;
-      padding: 8px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+  .slide img:hover {
+    filter: brightness(80%) sepia(20%) hue-rotate(300deg) saturate(150%);
+    transform: scale(1.05);
+  }
 
-    .btn:hover {
-      background: #ffc9e1;
-    }
+  @media (max-width: 768px) {
+    .slide { flex: 0 0 45%; }
+    .slide img { max-width: 180px; }
+  }
+  @media (max-width: 480px) {
+    .slide { flex: 0 0 70%; }
+    .slide img { max-width: 140px; }
+  }
 
-    /* Footer */
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #66334d;
-    }
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
 
-  </style>
+  .btn {
+    background: var(--accent1);
+    border: none;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .btn:hover { background: #ffc9e1; }
+
+  footer {
+    width: 100%;
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    border-top: 3px solid #ffc1de;
+    text-align: center;
+  }
+</style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <div class="branding">
-      <h1>Annj Crochet</h1>
-      <p>Handmade by Annjanea</p>
-    </div>
-  </header>
+<header>
+  <div class="branding">
+    <h1>Annj Crochet</h1>
+    <p>Handmade by Annjanea</p>
+  </div>
+</header>
 
-  <!-- ===== Carousel ===== -->
-  <main class="container">
-    <div class="carousel">
-      <div class="slides">
-        <div class="track" id="track">
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/k61j0JQn/16cc7c65fa0d31a8d5e016f65313a9d8.jpg" alt="Crochet Product 1"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/f3740Z4/257994ade4809148571dd1d4ab6f3c30.jpg" alt="Crochet Product 2"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/jPPzQywD/crochet-elephant-3-1024x768.jpg" alt="Crochet Product 3"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BHXtzNTm/b733b86e9a1d5cd56085fdf2590c3c76.jpg" alt="Crochet Product 4"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/v8kHCcV/DM-7-329abc23-22ee-479b-ad06-e42c330a7e25.webp" alt="Crochet Product 5"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/329rf4w/free-Chicken-crochet-pattern-1.jpg" alt="Crochet Product 6"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/kVdJ8WHY/il-1140x-N-4198097645-801z.webp" alt="Crochet Product 7"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/bj8Wwhw0/il-fullxfull-4981963797-tinl.webp" alt="Crochet Product 8"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BVj1BWwF/IMG-3600-2.webp" alt="Crochet Product 9"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/7tfpDLG5/maxresdefault.jpg" alt="Crochet Product 10"></a></div>
-          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/HTnTBqLC/P0.jpg" alt="Crochet Product 11"></a></div>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="btn" id="prev">◀ Prev</button>
-        <button class="btn" id="next">Next ▶</button>
+<main class="container">
+  <div class="carousel">
+    <div class="slides">
+      <div class="track" id="track">
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/k61j0JQn/16cc7c65fa0d31a8d5e016f65313a9d8.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/f3740Z4/257994ade4809148571dd1d4ab6f3c30.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/jPPzQywD/crochet-elephant-3-1024x768.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BHXtzNTm/b733b86e9a1d5cd56085fdf2590c3c76.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/v8kHCcV/DM-7-329abc23-22ee-479b-ad06-e42c330a7e25.webp"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/329rf4w/free-Chicken-crochet-pattern-1.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/kVdJ8WHY/il-1140x-N-4198097645-801z.webp"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/bj8Wwhw0/il-fullxfull-4981963797-tinl.webp"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BVj1BWwF/IMG-3600-2.webp"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/7tfpDLG5/maxresdefault.jpg"></a></div>
+        <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/HTnTBqLC/P0.jpg"></a></div>
       </div>
     </div>
-  </main>
+    <div class="controls">
+      <button class="btn" id="prev">◀ Prev</button>
+      <button class="btn" id="next">Next ▶</button>
+    </div>
+  </div>
+</main>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <h3>Contact Us</h3>
-    <p>📞 (337) 680-0116 | ✉️ hello@creolecrotchet.com</p>
-    <p>3311 N Azalea Ave, 70714</p>
-    <p>© 2025 Annj Crochet — Designed by LA Web Designs</p>
-  </footer>
+<footer>
+  <p>📞 (337) 680-0116 | ✉️ hello@creolecrotchet.com</p>
+  <p>3311 N Azalea Ave, 70714</p>
+  <p>© 2025 Annj Crochet — Designed by LA Web Designs</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
