@@ -7,10 +7,8 @@
   --text: #66334d;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
-  font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
   background: linear-gradient(180deg, var(--bg) 0%, var(--accent2) 100%);
   color: var(--text);
   display: flex;
@@ -18,96 +16,31 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
-header {
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
-  border-bottom: 3px solid #ffc1de;
-  padding: 10px 20px;
+/* Header title has a feminine script */
+.branding h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
 }
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: var(--text);
-}
-.branding {
-  text-align: center;
-  margin-top: 10px;
-}
-.branding h1 { font-size: 2rem; }
-.branding p { color: var(--muted); }
 
-/* ===== Carousel ===== */
-.container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  background: var(--card);
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 20px 0;
-}
-.slides { overflow: hidden; }
+/* Futuristic gallery animation */
 .track {
   display: flex;
-  transition: transform 400ms ease;
+  transition: transform 600ms cubic-bezier(0.77, 0, 0.175, 1);
 }
+
 .slide {
-  flex: 0 0 33.333%; /* Show 3 at a time */
+  flex: 0 0 33.333%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
-.slide img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  cursor: pointer;
-  transition: filter 0.3s ease, transform 0.2s ease;
+.slide.active {
+  transform: scale(1.1);
+  z-index: 2;
 }
-.slide img:hover {
-  filter: brightness(80%) sepia(20%) hue-rotate(300deg) saturate(150%);
-  transform: scale(1.05);
+.slide.inactive {
+  transform: scale(0.9);
+  opacity: 0.7;
 }
-
-.controls {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  background: linear-gradient(90deg, var(--accent2), var(--accent1));
-}
-.btn {
-  background: var(--accent1);
-  border: none;
-  color: var(--text);
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-.btn:hover { background: #ffc9e1; }
-
-/* ===== Footer ===== */
-footer {
-  background: linear-gradient(90deg, var(--accent2), var(--accent1));
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: var(--text);
-  border-top: 3px solid #ffc1de;
-}
-footer h3 { margin-bottom: 10px; }
