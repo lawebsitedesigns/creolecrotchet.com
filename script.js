@@ -7,26 +7,15 @@ const total = slides.length;
 function update() {
   const slideWidth = slides[0].clientWidth;
   track.style.transform = `translateX(-${current * slideWidth}px)`;
-
-  slides.forEach((s, i) => {
-    s.classList.remove("active", "inactive");
-    if (i >= current && i < current + visible) {
-      if (i === current + 1) {
-        s.classList.add("active"); // middle one pops
-      } else {
-        s.classList.add("inactive");
-      }
-    }
-  });
 }
 
 document.getElementById("prev").addEventListener("click", () => {
-  if (current > 0) current--;
+  current = (current - 1 + total) % total;
   update();
 });
 
 document.getElementById("next").addEventListener("click", () => {
-  if (current < total - visible) current++;
+  current = (current + 1) % total;
   update();
 });
 
