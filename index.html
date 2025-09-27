@@ -3,14 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Annj Crotchet | Handmade by Annjanea</title>
+  <title>creolecrotchet.com | Annjanea</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Feminine Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    /* Header font */
+    .branding h1, .branding p { font-family: 'Great Vibes', cursive; }
+
+    /* Reduce carousel image height */
+    .slide img {
+      width: 100%;
+      max-height: 200px; /* desktop height */
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: filter 0.3s ease, transform 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      .slide img { max-height: 150px; }
+    }
+    @media (max-width: 480px) {
+      .slide img { max-height: 120px; }
+    }
+  </style>
 </head>
 <body>
   <!-- ===== Header ===== -->
   <header>
+    <div class="topbar">
+      <div>📞 (337) 680-0116</div>
+      <div>✉️ hello@creolecrotchet.com</div>
+    </div>
     <div class="branding">
-      <h1>Annj Crotchet</h1>
+      <h1>creolecrotchet.com</h1>
       <p>Handmade by Annjanea</p>
     </div>
   </header>
@@ -20,61 +48,17 @@
     <div class="carousel">
       <div class="slides">
         <div class="track" id="track">
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/k61j0JQn/16cc7c65fa0d31a8d5e016f65313a9d8.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/f3740Z4/257994ade4809148571dd1d4ab6f3c30.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/jPPzQywD/crochet-elephant-3-1024x768.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/BHXtzNTm/b733b86e9a1d5cd56085fdf2590c3c76.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/v8kHCcV/DM-7-329abc23-22ee-479b-ad06-e42c330a7e25.webp" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/329rf4w/free-Chicken-crochet-pattern-1.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/kVdJ8WHY/il-1140x-N-4198097645-801z.webp" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/bj8Wwhw0/il-fullxfull-4981963797-tinl.webp" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/BVj1BWwF/IMG-3600-2.webp" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/7tfpDLG5/maxresdefault.jpg" alt="">
-            </a>
-          </div>
-          <div class="slide">
-            <a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank">
-              <img src="https://i.ibb.co/HTnTBqLC/P0.jpg" alt="">
-            </a>
-          </div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/k61j0JQn/16cc7c65fa0d31a8d5e016f65313a9d8.jpg" alt="Crochet Product 1"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/f3740Z4/257994ade4809148571dd1d4ab6f3c30.jpg" alt="Crochet Product 2"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/jPPzQywD/crochet-elephant-3-1024x768.jpg" alt="Crochet Product 3"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BHXtzNTm/b733b86e9a1d5cd56085fdf2590c3c76.jpg" alt="Crochet Product 4"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/v8kHCcV/DM-7-329abc23-22ee-479b-ad06-e42c330a7e25.webp" alt="Crochet Product 5"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/329rf4w/free-Chicken-crochet-pattern-1.jpg" alt="Crochet Product 6"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/kVdJ8WHY/il-1140x-N-4198097645-801z.webp" alt="Crochet Product 7"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/bj8Wwhw0/il-fullxfull-4981963797-tinl.webp" alt="Crochet Product 8"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/BVj1BWwF/IMG-3600-2.webp" alt="Crochet Product 9"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/7tfpDLG5/maxresdefault.jpg" alt="Crochet Product 10"></a></div>
+          <div class="slide"><a href="https://www.paypal.com/ncp/payment/N4P59UYRL7FQL" target="_blank"><img src="https://i.ibb.co/HTnTBqLC/P0.jpg" alt="Crochet Product 11"></a></div>
         </div>
       </div>
       <div class="controls">
@@ -86,11 +70,10 @@
 
   <!-- ===== Footer ===== -->
   <footer>
-    <h3>Contact & Info</h3>
-    <p>📞 (337) 680-0116 | ✉️ annj@icloud.com</p>
-    <p>3311 N Azalea Ave, LA 70714</p>
-    <p>© 2025 Annj Crotchet — Handmade with ❤️ by Annjanea</p>
-    <p>Designed by LA WEBSITE DESIGNS</p>
+    <h3>Contact Us</h3>
+    <p>📞 (337) 680-0116 | ✉️ hello@creolecrotchet.com</p>
+    <p>3311 N Azalea Ave, 70714</p>
+    <p>© 2025 creolecrotchet.com — Designed by LA Web Designs</p>
   </footer>
 
   <script src="script.js"></script>
