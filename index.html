@@ -3,23 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>creolecrotchet.com | Annjanea</title>
+  <title>Annj Crochet | Handmade by Annjanea</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Feminine Font -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    /* Header font */
-    .branding h1, .branding p { font-family: 'Great Vibes', cursive; }
+    /* Center everything */
+    body, html {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
 
-    /* Reduce carousel image height */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    /* Header font */
+    .branding h1, .branding p { 
+      font-family: 'Great Vibes', cursive; 
+      margin: 0;
+    }
+
+    /* Carousel */
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .slides {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .track {
+      display: flex;
+      transition: transform 400ms ease;
+    }
+
+    .slide {
+      flex: 0 0 33.333%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    /* Carousel images */
     .slide img {
       width: 100%;
-      max-height: 200px; /* desktop height */
+      max-height: 200px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: filter 0.3s ease, transform 0.2s ease;
+      margin: 0 auto;
+    }
+
+    .slide img:hover {
+      filter: brightness(80%) sepia(20%) hue-rotate(300deg) saturate(150%);
+      transform: scale(1.05);
     }
 
     @media (max-width: 768px) {
@@ -28,17 +81,47 @@
     @media (max-width: 480px) {
       .slide img { max-height: 120px; }
     }
+
+    /* Carousel buttons */
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background: #ffb7d5;
+      border: none;
+      color: #66334d;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background: #ffc9e1;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #66334d;
+    }
+
   </style>
 </head>
 <body>
+
   <!-- ===== Header ===== -->
   <header>
-    <div class="topbar">
-      <div>📞 (337) 680-0116</div>
-      <div>✉️ hello@creolecrotchet.com</div>
-    </div>
     <div class="branding">
-      <h1>creolecrotchet.com</h1>
+      <h1>Annj Crochet</h1>
       <p>Handmade by Annjanea</p>
     </div>
   </header>
@@ -73,7 +156,7 @@
     <h3>Contact Us</h3>
     <p>📞 (337) 680-0116 | ✉️ hello@creolecrotchet.com</p>
     <p>3311 N Azalea Ave, 70714</p>
-    <p>© 2025 creolecrotchet.com — Designed by LA Web Designs</p>
+    <p>© 2025 Annj Crochet — Designed by LA Web Designs</p>
   </footer>
 
   <script src="script.js"></script>
