@@ -73,7 +73,14 @@ header {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: filter 0.3s ease, transform 0.2s ease;
 }
+.slide img:hover {
+  filter: brightness(80%) sepia(20%) hue-rotate(300deg) saturate(150%);
+  transform: scale(1.05);
+}
+
 .controls {
   display: flex;
   gap: 8px;
